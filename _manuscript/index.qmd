@@ -1,0 +1,23 @@
+---
+title: The Data Science (Mis)education of Penguins
+authors:
+  - name: Mine Çetinkaya-Rundel
+    affiliation: Duke University
+    roles: writing
+    corresponding: true
+bibliography: references.bib
+---
+
+## Section
+
+For this analysis we'll use the `penguins` dataset from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins/) package.[@gorman2014]
+
+```{r}
+library(palmerpenguins)
+```
+
+There are `r nrow(penguins)` in our dataset.
+
+{{< embed notebooks/penguins.qmd#fig-bill-dims-species >}}
+
+@fig-bill-dims-species shows something super interesting about penguins...

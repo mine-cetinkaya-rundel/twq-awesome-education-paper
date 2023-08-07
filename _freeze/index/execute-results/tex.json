@@ -1,0 +1,14 @@
+{
+  "hash": "a86ba349538c823c1195406bd52a66b2",
+  "result": {
+    "markdown": "---\ntitle: The Data Science (Mis)education of Penguins\nauthors:\n  - name: Mine Çetinkaya-Rundel\n    affiliation: Duke University\n    roles: writing\n    corresponding: true\nbibliography: references.bib\n---\n\n\n\n\n\n## Section\n\nFor this analysis we'll use the `penguins` dataset from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins/) package.[@gorman2014]\n\n\n\n\n\n::: {.cell warning.hidden='true' message.hidden='true'}\n\n```{.r .cell-code .hidden}\nlibrary(palmerpenguins)\n```\n:::\n\n\n\n\n\nThere are 344 in our dataset.\n\n\n\n\n\n{{< embed notebooks/penguins.qmd#fig-bill-dims-species >}}\n\n\n\n\n\n\n\n\n\n@fig-bill-dims-species shows something super interesting about penguins...\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

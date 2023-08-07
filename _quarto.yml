@@ -1,0 +1,29 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+    citations-hover: true
+    crossrefs-hover: true
+    toc: true
+    toc-location: left
+    title-block-style: manuscript
+  docx: default
+  jats: default
+  jasa-pdf:
+    keep-tex: true
+
+  # (other formats)
+  # pdf: default
+
+execute:
+  freeze: true
+  echo: false
+
+editor: visual
+

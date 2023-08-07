@@ -1,0 +1,62 @@
+---
+title: "Hello, Penguins!"
+author: Mine Çetinkaya-Rundel
+institute: Duke University
+date: now
+format: html
+editor: visual
+execute:
+  echo: true
+---
+
+# Introduction
+
+## Data
+
+For this analysis we'll use the `penguins` dataset from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins/) package.
+
+```{r}
+#| label: load-packages
+library(tidyverse)
+library(ggthemes)
+library(palmerpenguins)
+library(gt)
+```
+
+```{r}
+glimpse(penguins)
+```
+
+## Species
+
+```{r}
+#| label: fig-bill-dims-species
+#| fig-cap: "The relationship between bill length and depth of penguins is positive and relatively strong for each of the three species: Adelie, Chinstrap, and Gentoo."
+#| fig-width: 8
+#| fig-asp: 0.618
+#| fig-alt: "A scatterplot showing the relationship between bill length and depth of penguins, with points colored by species as well as smooth lines representing the relationship. The relationship is positive and relatively strong for each of the three species: Adelie, Chinstrap, and Gentoo."
+#| warning: false
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = bill_depth_mm,
+    color = species
+  )
+) +
+  geom_point() +
+  geom_smooth() +
+  scale_color_colorblind() +
+  theme(legend.position = "top") +
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)")
+```
+
+## Penguins
+
+```{r}
+#| label: tbl-penguins-top10
+#| tbl-cap: First 10 penguins.
+penguins |>
+  slice_head(n = 10) |>
+  select(species, island, bill_length_mm, bill_depth_mm) |>
+  gt()
+```
